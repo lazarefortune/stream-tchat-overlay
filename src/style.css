@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.messages {
+    position: absolute;
+    inset: 0;
+    top: auto;
+    height: 70%; /* Limite des messages visibles */
+    overflow: hidden; /* Cache tout ce qui dépasse cette zone */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Les messages partent du bas */
+    gap: 1rem;
+    padding: 1rem;
+
+    /* Effet de fondu en haut */
+    mask-image: linear-gradient(to bottom, transparent, black 40%, black 100%);
+}
+
+.message {
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: MessageIn 0.3s ease-out;
+}
+.message img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #555;
+}
+
+.meta .name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.content {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Entrée fluide des messages */
+@keyframes MessageIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
