@@ -1,3 +1,5 @@
+import "./style.css"
+
 const tchat = document.getElementById('tchat');
 
 window.addEventListener('onEventReceived', function (obj) {
