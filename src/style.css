@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* import font from public/dwight-font-family */
+@font-face {
+    font-family: "Dwight";
+    src: url("../public/dwight-font-family/Dwight_Trial-Regular-BF65f271ceb4d49.otf") format("opentype");
+}
+
 body, html {
-    font-family: "Overpass", serif;
+    font-family: "Dwight", "Overpass", serif;
     height: 100%;
     margin: 0;
     background-color: #000000;
